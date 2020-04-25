@@ -1,0 +1,9 @@
+#This function determines the number of occurences of a specfic pattern in a large text 
+#Input: Pattern: The specific pattern that you are looking for, Text is the specific text that you are looking for
+#Output: Number of Occurances
+def PatternCount(Text, Pattern):
+    count = 0
+    for i in range(len(Text)-len(Pattern)+1):
+        if Text[i:i+len(Pattern)] == Pattern:
+            count = count+1
+    return count 
