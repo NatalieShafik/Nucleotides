@@ -1,0 +1,27 @@
+# Input:  A DNA string Pattern
+# Output: The reverse complement of Pattern
+def ReverseComplement(Pattern):   
+    Comp = Complement(Pattern)
+    RevComp  = Reverse(Comp)
+    return RevComp
+
+def Reverse(Pattern):
+    Rev = ''
+    for i in range(0,len(Pattern)):
+        x = len(Pattern) - 1 - i
+        Rev = Rev + Pattern[x]
+    return Rev
+    
+def Complement(Pattern):
+    Comp = ''
+    for i in range(0,len(Pattern)):
+      #  print(Pattern[i])
+        if Pattern[i] == 'A':
+            Comp = Comp + 'T'
+        if Pattern[i] == 'T':
+            Comp = Comp + 'A'
+        if Pattern[i] == 'G':
+            Comp = Comp + 'C'
+        if Pattern[i] == 'C':
+            Comp = Comp + 'G'
+    return Comp
